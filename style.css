@@ -1,0 +1,214 @@
+/*
+Always with the help of the internet
+*/
+
+body {
+    font-family: "Karla", sans-serif;
+    font-style: normal;
+    background-color: hsl(148, 38%, 91%);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+
+
+}
+
+main {
+    background-color: white;
+    border-radius: 15px;
+    /* width:min((100%-2rem), 46.25rem);*/
+    padding-block: 2em;
+    padding-inline: clamp(0.8rem, 0.56rem + 1.2vw, 2rem);
+    /* max-width: 46.25rem;*/
+    width: clamp(19.875rem, 14.6625rem + 26.0625vw, 45.9375rem);
+}
+
+h1 {
+    margin-top: 0;
+
+}
+
+
+label:not([for="consent"]) {
+    display: block;
+    margin-bottom: .5em;
+}
+.queryType{
+    margin-bottom: .5em;
+}
+
+label[for="consent"] {
+    display: inline;
+}
+label[for="consent"]:hover{
+    color: hsl(169, 82%, 27%);
+}
+
+input[type="radio"]{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+input {
+    cursor: pointer;
+ 
+}
+#first-name:hover, #last-name:hover, #email:hover{
+    border: 1px solid hsl(147, 73%, 35%);
+    cursor: pointer;
+
+}
+
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+    border-radius: 5px;
+    border: 1px solid hsl(186, 15%, 59%);
+    width: 100%;
+}
+
+input:not([type="radio"]):not([type="checkbox"]) {
+    margin-bottom: .5em;
+}
+
+textarea {
+    height: 240px;
+}
+
+.enquiry {
+    display: flex;
+    align-items: center;
+    padding-block-start: 0.5em;
+    gap: 0.5em;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+
+.enquiry:hover,
+.enquiry>label:hover {
+    cursor: pointer;
+}
+
+
+button {
+    border-radius: 5px;
+    background: hsl(169, 82%, 27%);
+    color: white;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    border: none;
+    padding-block: 1em;
+}
+
+button:hover{
+    background-color: hsl(147, 53%, 10%);
+    cursor: pointer;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    accent-color: hsl(147, 73%, 35%);
+}
+
+.focused {
+    background: hsl(148, 38%, 91%);
+    border: 1px solid hsl(169, 82%, 27%)
+}
+
+label[for="consent"] {
+    cursor: pointer;
+    padding-block: 2.5em;
+}
+label[for="msg"] {
+    padding-block-start: 1em;
+}
+
+.consent {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+   /* margin-block-start: 2.8em;*/
+}
+
+
+.validation-message{ 
+    margin-bottom: .8em;
+    color:red;
+    font-weight: 300;
+  
+}
+
+.success-message{
+    background-color:hsl(147, 53%, 10%) ;
+    color: white;
+    border-radius: 15px;
+    width:clamp(15.5rem, 11.274647887323944rem + 18.028169014084504vw, 27.5rem);
+    padding-inline: 1em;
+}
+
+.success-message p:first-of-type{
+    font-weight:700;
+    display: flex;
+    align-items: center;
+    gap:1em;
+}
+
+.success-message p:nth-child(2){
+    font-weight: 300;
+}
+
+
+textarea:hover{
+    cursor: pointer;
+    border: 1px solid hsl(147, 73%, 35%);
+}
+
+.icon {
+    width: 0.3em;
+    height: 0.3em;
+    fill: hsl(147, 73%, 35%);
+    vertical-align: top;
+  }
+  svg#definition {
+    display: none;
+  }
+.hidden{
+    display: none;
+}
+
+.error{
+    border: 1px solid red!important;
+} 
+
+.names div, .mail {
+    padding-bottom:1em;
+}
+#first-name, #last-name, #email, .enquiry{
+    height:2.6875em;
+}
+
+
+@media only screen and (min-width:725px) {
+
+    .names div, .mail {
+        width: 100%;
+        padding-bottom:1em;
+    }
+
+
+    .names,
+    .queries {
+        display: flex;
+        gap: 1em;
+    }
+
+
+
+    textarea {
+        height: 110px;
+    }
+}

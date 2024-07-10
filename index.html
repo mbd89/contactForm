@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  </head>
+<body>
+
+
+
+  <div class="success-message hidden">
+    <p><img src="assets/images/icon-success-check.svg" alt="null">Message Sent!</p>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <main>
+    <svg id="definition" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="required" viewbox="0 0 128 128">
+          <g>
+            <path
+              d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z">
+            </path>
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+    <form id="form" novalidate>
+      <h1 class="title">
+        Contact Us
+      </h1>
+
+
+      <div class="names">
+
+        <div>
+          <label for="first-name">First Name <svg class="icon" focusable="false">
+              <use xlink:href="#required"></use>
+            </svg></label>
+          <input type="text" id="first-name" name="first-name" autocomplete="given-name"
+            aria-describedby="first-name-validation" required>
+          <span id="first-name-validation" class="validation-message firstName hidden">This field is required</span>
+          </div>
+
+        <div>
+          <label for="last-name">Last Name <svg class="icon" focusable="false">
+              <use xlink:href="#required"></use>
+            </svg></label>
+          <input type="text" id="last-name" name="last-name" autocomplete="family-name"
+            aria-describedby="last-name-validation" required>
+          <span id="last-name-validation" class="validation-message lastName hidden">This field is required</span>
+          </div>
+      </div>
+      
+        <div class="mail">
+          <label for="email">Email Address <svg class="icon" focusable="false">
+              <use xlink:href="#required"></use>
+            </svg></label>
+          <input type="email" id="email" name="email" autocomplete="off" aria-describedby="email-validation">
+          <span id="email-validation" class="validation-message email hidden">Please enter a valid email address</span>
+          </div>
+
+
+        <div class="queryType">Query Type <svg class="icon" focusable="false">
+            <use xlink:href="#required"></use>
+          </svg></div>
+        <div class="queries">
+
+          <div class="enquiry">
+            <input type="radio" id="General-Enquiry" name="query-type" aria-describedby="query-type-validation"
+              required>
+            <label for="General-Enquiry">General Enquiry</label>
+          </div>
+
+          <div class="enquiry">
+            <input type="radio" id="Support-Request" name="query-type" aria-describedby="query-type-validation"
+              required>
+            <label for="Support-Request">Support Request</label>
+          </div>
+
+        </div>
+        <span id="query-type-validation" class="validation-message queryType hidden">Please select a query type</span>
+        
+          <label for="msg">Message <svg class="icon" focusable="false">
+              <use xlink:href="#required"></use>
+            </svg></label>
+          <textarea name="user_message" id="msg"></textarea>
+          <span id="message-validation" class="validation-message msg hidden">This field is required</span>
+      
+
+       
+          <div class="consent">
+            <input id="consent" type="checkbox" name="consent" aria-describedby="consent-validation" required>
+
+            <label for="consent">I hereby consent to being contacted by the team <svg class="icon" focusable="false">
+                <use xlink:href="#required"></use>
+              </svg></label>
+          </div>
+        
+        <span id="consent-validation" class="validation-message consent hidden">To submit this form, please consent to
+          being
+          contacted</span>
+      
+
+
+      <button type="submit">Submit</button>
+
+
+    </form>
+
+
+  </main>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
+<!--
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+ -->
